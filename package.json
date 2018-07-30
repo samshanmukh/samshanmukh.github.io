@@ -1,0 +1,28 @@
+{
+  "name": "samshanmukh.github.io",
+  "version": "1.0.0",
+  "description": "My Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o main/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samshanmukh/samshanmukh.github.io.git"
+  },
+  "keywords": [
+    "sam",
+    "shanmukh",
+    "samshanmukh",
+    "sain"
+  ],
+  "author": "Sam Shanmukh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samshanmukh/samshanmukh.github.io/issues"
+  },
+  "homepage": "https://github.com/samshanmukh/samshanmukh.github.io#readme",
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
