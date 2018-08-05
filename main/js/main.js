@@ -18,7 +18,7 @@ menuBtn.addEventListener('click', () => {
 		navItems.forEach(item => item.classList.add('show'));
 		
 		// Show Menu State
-		showManu = false;
+		showMenu = false;
 	} else {
 		menuBtn.classList.remove('close');
 		menu.classList.remove('show');
@@ -27,6 +27,6 @@ menuBtn.addEventListener('click', () => {
 		navItems.forEach(item => item.classList.remove('show'));
 
 		// Show Menu State
-		showManu = true;
+		showMenu = true;
 	}
 });
