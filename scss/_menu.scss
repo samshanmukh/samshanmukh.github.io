@@ -11,7 +11,7 @@
 		width: 30px;
 		height: 2px;
 		margin: 0 0 5px 0;
-		background: #fff;
+		background: set-text-color($primary-color);
 		@include easeOut;
 	}
 
@@ -90,7 +90,7 @@
 			height: 250px;
 			background: url('../img/grey-portrait-250.jpg');
 			border-radius: 50%;
-			border: solid 3px $secondary-color;
+			border: solid 3px set-style-text-color($primary-color);
 		}
 	}
 
@@ -103,7 +103,7 @@
 		}
 
 		&.current > a {
-			color: $secondary-color;
+			color: set-style-text-color($primary-color);
 		}
 	}
 
@@ -114,11 +114,11 @@
 		text-transform: uppercase;
 		padding: 1rem 0;
 		font-weight: 350;
-		color: #fff;
+		color: set-text-color($primary-color);
 		text-decoration: none;
 		@include easeOut;
 		&:hover {
-			color: $secondary-color;
+			color: set-style-text-color($primary-color);
 		}
 	}
 }
@@ -130,27 +130,3 @@
 	}
 }
 
-// Media Query Mixin
-@mixin mediaSm {
-	@media screen and (max-width: 500px) {
-		@content;
-	}
-}
-
-@mixin mediaMd {
-	@media screen and (max-width: 768px) {
-		@content;
-	}
-}
-
-@mixin mediaLg {
-	@media screen and (min-width: 769px) and (max-width: 1170px) {
-		@content;
-	}
-}
-
-@mixin mediaXl {
-	@media screen and (min-width: 1171px) {
-		@content;
-	}
-}

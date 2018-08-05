@@ -9,7 +9,7 @@
 body {
 	@include background;
 	background: $primary-color;
-	color: #fff;
+	color: set-text-color($primary-color);
 	height: 100%;
 	margin: 0;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -44,7 +44,7 @@ header {
 }
 
 .text-secondary {
-	color: $secondary-color;	
+	color: set-style-text-color($primary-color);	
 }
 
 main {
@@ -58,7 +58,7 @@ main {
 			padding: 0.4rem;
 
 			&:hover {
-				color: $secondary-color;
+				color: set-style-text-color($primary-color);
 				@include easeOut();
 			}
 		}
