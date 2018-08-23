@@ -9,7 +9,7 @@
     width: 30px;
     height: 2px;
     margin: 0 0 5px 0;
-    background: #000;
+    background: #fff;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #f2f2f2;
+    background: #373737;
     list-style: none;
     transform: translate3d(0, 100em, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #e6e6e6;
+    background: #2b2b2b;
     transform: translate3d(0, -100em, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -57,14 +57,14 @@
       height: 250px;
       background: url("../img/grey-portrait-250.jpg");
       border-radius: 50%;
-      border: solid 3px red; }
+      border: solid 3px #eece1a; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: red; }
+      color: #eece1a; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -72,11 +72,11 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 350;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: red; }
+      color: #eece1a; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.2s; }
@@ -94,8 +94,8 @@
   box-sizing: border-box; }
 
 body {
-  background: #fff;
-  color: #000;
+  background: #444;
+  color: #fff;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -112,7 +112,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(255, 255, 255, 0.8); }
+      background: rgba(68, 68, 68, 0.8); }
 
 h1, h2, h3 {
   margin: 0;
@@ -122,7 +122,7 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(255, 255, 255, 0.5); }
+    background: rgba(73, 73, 73, 0.5); }
 
 a {
   color: #fff;
@@ -134,7 +134,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: red; }
+  color: #eece1a; }
 
 main {
   padding: 4rem;
@@ -144,7 +144,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: red;
+        color: #eece1a;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -160,7 +160,7 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: red 3px solid; }
+    border: #eece1a 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -171,9 +171,9 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: white;
+    background: #515151;
     padding: 0.5rem;
-    border-bottom: red 5px solid; }
+    border-bottom: #eece1a 5px solid; }
 
 .projects {
   display: grid;
@@ -181,10 +181,10 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
-    border: 3px #000 solid; }
+    border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: red;
+      border-color: #eece1a;
       transition: all 0.5s ease-out; }
 
 .boxes {
@@ -195,16 +195,16 @@ main {
   margin-top: 1rem; }
   .boxes div {
     font-size: 2rem;
-    border: 3px #000 solid;
+    border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: red;
+      background: #eece1a;
       color: #000; }
       .boxes div:hover span {
-        color: #000; }
+        color: #fff; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -212,23 +212,23 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: red;
-    color: #000;
+    background: #eece1a;
+    color: #fff;
     transition: all 0.5s ease-out; }
 
 .btn-dark {
-  background: gray;
+  background: black;
   color: #fff; }
 
 .btn-light {
-  background: white;
+  background: #c4c4c4;
   color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #e6e6e6;
-  color: #000;
+  background: #2b2b2b;
+  color: #fff;
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
