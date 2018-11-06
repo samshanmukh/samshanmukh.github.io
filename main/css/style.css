@@ -92,7 +92,7 @@
 
 * {
   box-sizing: border-box;
-  outline: none; }
+  outline: none !important; }
 
 body {
   background: #444;

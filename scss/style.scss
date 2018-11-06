@@ -3,7 +3,7 @@
 
 * {
 	box-sizing: border-box;
-	outline: none;
+	outline: none !important;
 }
 
 body {
@@ -35,7 +35,6 @@ h1, h2, h3 {
 a {
 	color: #fff;
 	text-decoration: none;
-	outline: none !important;
 }
 
 header {
