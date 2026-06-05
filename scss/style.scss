@@ -43,6 +43,19 @@ header {
 	width: 100%;
 }
 
+// Scroll Reveal
+.reveal {
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: all 1s ease;
+
+	&.active {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
 .text-secondary {
 	color: set-style-text-color($primary-color);	
 }
@@ -114,17 +127,54 @@ main {
 // My Work
 .projects {
 	display: grid;
-	grid-gap: 0.7rem;
+	grid-gap: 1.5rem;
 	grid-template-columns: repeat(3, 1fr);
 
-	img {
-		width: 100%;
+	.item {
+		position: relative;
+		overflow: hidden;
 		border: 3px set-text-color($primary-color) solid;
+		@include easeOut;
 
 		&:hover {
-			opacity: 0.5;
+			transform: scale(1.05);
 			border-color: set-style-text-color($primary-color);
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+			img {
+				opacity: 0.3;
+			}
+
+			.btn-light, .btn-dark {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
 			@include easeOut;
+		}
+
+		.btn-light, .btn-dark {
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 80%;
+			opacity: 0;
+			transform: translateY(20px);
+			@include easeOut;
+		}
+
+		.btn-light {
+			top: 30%;
+		}
+
+		.btn-dark {
+			top: 60%;
 		}
 	}
 }
