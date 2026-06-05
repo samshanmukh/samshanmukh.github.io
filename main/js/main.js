@@ -86,3 +86,57 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 // To check the scroll position on page load
 reveal();
+
+// Mouse Cursor Trail Effect
+const coords = { x: 0, y: 0 };
+const circles = [];
+
+const colors = [
+  "#58a6ff",
+  "#4d96e8",
+  "#4286d1",
+  "#3776ba",
+  "#2c66a3",
+  "#21568c",
+  "#164675",
+  "#0b365e",
+  "#002647"
+];
+
+// Create circles
+for (let i = 0; i < 20; i++) {
+  const div = document.createElement("div");
+  div.className = "cursor-circle";
+  document.body.appendChild(div);
+  circles.push(div);
+}
+
+window.addEventListener("mousemove", function(e) {
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+});
+
+function animateCircles() {
+  let x = coords.x;
+  let y = coords.y;
+
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
+
+    circle.style.scale = (circles.length - index) / circles.length;
+
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+
+    circle.style.backgroundColor = colors[index % colors.length];
+  });
+
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();

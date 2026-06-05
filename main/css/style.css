@@ -141,6 +141,19 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.cursor-circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: #58a6ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* so it's stays on top of all other elements */
 }
 
 h1, h2, h3 {
