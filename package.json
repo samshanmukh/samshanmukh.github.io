@@ -4,7 +4,7 @@
   "description": "My Portfolio Website",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o main/css/ --recursive"
+    "sass": "sass scss/:main/css/"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/samshanmukh/samshanmukh.github.io#readme",
   "dependencies": {
-    "node-sass": "^4.9.2"
+    "sass": "^1.77.0"
   }
 }
