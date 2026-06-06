@@ -68,24 +68,25 @@ if (typeSpan) {
     document.addEventListener('DOMContentLoaded', type);
 }
 
-// Scroll Reveal
-function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
+// Scroll Reveal using Intersection Observer
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
         } else {
-            reveals[i].classList.remove("active");
+            // Keep it active once it has been revealed if you prefer
+            // entry.target.classList.remove('active');
         }
-    }
-}
+    });
+}, {
+    threshold: 0.1
+});
 
-window.addEventListener("scroll", reveal);
-// To check the scroll position on page load
-reveal();
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.reveal').forEach(el => {
+        revealObserver.observe(el);
+    });
+});
 
 // Mouse Cursor Trail Effect
 const coords = { x: 0, y: 0 };
@@ -107,6 +108,8 @@ const colors = [
 for (let i = 0; i < 20; i++) {
   const div = document.createElement("div");
   div.className = "cursor-circle";
+  div.x = 0;
+  div.y = 0;
   document.body.appendChild(div);
   circles.push(div);
 }
